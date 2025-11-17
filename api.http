@@ -1,0 +1,54 @@
+GET http://localhost:8000/products/ HTTP/1.1
+
+###
+
+POST http://localhost:8000/products/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMTI4NjYwLCJpYXQiOjE3NjMxMjgzNjAsImp0aSI6IjljZDUwNzRhYTA3ZjQyZGM5NDU5NzU4ZjA1NWEzMjRhIiwidXNlcl9pZCI6IjIifQ.nNDdy8vZd1k5P2IQTkcR5ygKB6jzBf53XOuptrxKAKc
+
+{
+    "name": "Television",
+    "price": 300.00,
+    "stock": 21,
+    "description": "asfjods"
+}
+
+###
+
+GET http://localhost:8000/products/1/ HTTP/1.1
+
+
+### 
+PUT http://localhost:8000/products/1/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Television",
+    "price": 300.00,
+    "stock": 21,
+    "description": "asfjods"
+}
+
+###
+
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "password": "admin"
+}
+
+###
+
+GET http://localhost:8000/user-orders/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMTI4NjYwLCJpYXQiOjE3NjMxMjgzNjAsImp0aSI6IjljZDUwNzRhYTA3ZjQyZGM5NDU5NzU4ZjA1NWEzMjRhIiwidXNlcl9pZCI6IjIifQ.nNDdy8vZd1k5P2IQTkcR5ygKB6jzBf53XOuptrxKAKc
+
+###
+
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MzQ1NTAzMCwiaWF0IjoxNzYzMzY4NjMwLCJqdGkiOiJkZjA5ODQwMjdiZTA0M2Q1YTZjMmEwMmFlMmFhNjE1MyIsInVzZXJfaWQiOiIyIn0.SmcvkdwPJhGaVY8QgpINibV6KPjjLXxMGZMMAMQEn88"
+}
